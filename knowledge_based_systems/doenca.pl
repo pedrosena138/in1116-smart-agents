@@ -38,11 +38,9 @@ sintoma(esquistossomose_mansoni, hepatose_plenomegalia).
 sintoma(doenca_de_chagas, infertilidade).
 sintoma(leishmaniose, ulceras_na_pele).
 
-doenca(Doenca, Sintoma, Tipo, Parasitose) :- 
-  sintoma(Doenca, Sintoma),
+doenca(Doenca, Habita, Sintoma, Reino, Tipo, Parasitose) :-
   habita(Doenca, Habita),
+  parasitose(Doenca, Parasitose),
   reino(Doenca, Reino),
   tipo(Doenca, Tipo),
-  parasitose(Doenca, Parasitose).
-
-
+  sintoma(Doenca, Sintoma).
