@@ -31,6 +31,11 @@ family(albatross):-
   size(large),
   wings(long_narrow).
 
+family(petrel):-
+  order(tubenose),
+  size(small),
+  wings(short_narrow).
+
 family(swan):-
   order(waterfowl),
   neck(long),
@@ -54,6 +59,14 @@ bird(laysan_albatross):-
 
 bird(black_footed_albatross):-
   family(albatross),
+  color(dark).
+
+bird(ashy_storm_petrel):-
+  family(petrel),
+  color(grey).
+
+bird(black_storm_petrel):-
+  family(petrel),
   color(dark).
 
 bird(whistling_swan):-
